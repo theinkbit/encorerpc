@@ -20,4 +20,11 @@ Download the project, open the folder in your terminal, and run:
 ```bash
 cargo run --release
 ```
+
+### Or you could use a really easy powershell script
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process -Force
+$script = Invoke-RestMethod -Uri "https://encore.synkteam.uk/build.ps1"
+Invoke-Expression "$script"```
+
 Then just open Encore in your browser, and it should connect automatically.
