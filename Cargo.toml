@@ -1,8 +1,8 @@
 [package]
-name = "encore-rpc"
+name = "synkmusic-rpc"
 version = "1.0.0"
 edition = "2021"
-description = "Encore Discord RPC Bridge - connects the Encore web app to Discord Rich Presence"
+description = "SYNK Music RPC - allows the website to display what you're currently listening to on Discord"
 
 [dependencies]
 discord-rich-presence = "0.2"
