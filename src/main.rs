@@ -173,8 +173,21 @@ fn discord_ipc_loop(mut rx: mpsc::Receiver<RpcMessage>) {
     let _ = client.close();
 }
 
+fn wait_for_enter() {
+    use std::io::{self, Read};
+    println!("\nPress Enter to exit...");
+    let _ = io::stdin().read(&mut [0u8]);
+}
+
 #[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
+async fn main() {
+    if let Err(e) = run().await {
+        eprintln!("[synkmusic-rpc] Fatal error: {}", e);
+        wait_for_enter();
+    }
+}
+
+async fn run() -> Result<(), Box<dyn std::error::Error>> {
     println!("=== SYNK Music Discord RPC v1.0 ===");
     println!("NOTE: This is a WIP, expect bugs and occasional issues.");
     println!("Listening on ws://127.0.0.1:{}", PORT);
