@@ -50,7 +50,20 @@ No. If you don't believe us then you can check the source code for yourselves, i
 Make sure you've got Activity Status enabled in Discord. Go to **Settings > Activity Privacy** and turn on **"Share your activity status"**. Also make sure Discord is actually running before you start the RPC, it can't update your status if there's nothing to connect to.
 
 ## Contributing
-PRs are welcome. The codebase is pretty small so it shouldn't be too hard to find your way around. If you're planning something big, open an issue first so we can talk about it before you sink time into it.
+PRs are welcome! The codebase is pretty small so it shouldn't be too hard to find your way around.
+
+Before you start:
+- **Small fixes** (typos, minor bugs, etc.) - just open a PR, no need to ask first.
+- **Bigger changes** (new features, refactors, etc.) - open an issue first so we can have a chat about it before you sink time into it.
+
+### AI-generated code
+We follow a similar rule to what the Linux kernel does. You're welcome to use AI tools (Copilot, ChatGPT, Claude, whatever) to help you write code, the same way you'd use any other tool. However:
+- **You are fully responsible for everything you submit.** If it's buggy, breaks something, or has licensing issues, that's on you, not the AI.
+- **You must have actually reviewed and understood the code.** Don't just paste AI output into a PR without reading it.
+- **Do not credit AI as a co-author.** AI is a tool, not a contributor. No AI co-author tags, no AI sign-offs.
+- **Low-effort AI-generated PRs will be rejected.** If it looks like you've just dumped a prompt into ChatGPT and submitted the output without any thought, it's getting closed.
+
+In short: use AI if it helps, but own your code.
 
 ## License
 MIT, do whatever you want with it.
