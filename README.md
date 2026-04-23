@@ -17,12 +17,6 @@ Download the project, open the folder in your terminal, and run:
 ```bash
 cargo run --release
 ```
-### Or you could use a really easy powershell script
-```powershell
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process -Force
-$script = Invoke-RestMethod -Uri "https://apps.synkmusic.com/misc/build.ps1"
-Invoke-Expression "$script"
-```
 Then just open SYNK Music in your browser, and it should connect automatically.
 
 ## 2: Download the pre-compiled version from the releases.
@@ -48,6 +42,8 @@ No. If you don't believe us then you can check the source code for yourselves, i
 
 ### Why isn't my status showing on Discord?
 Make sure you've got Activity Status enabled in Discord. Go to **Settings > Activity Privacy** and turn on **"Share your activity status"**. Also make sure Discord is actually running before you start the RPC, it can't update your status if there's nothing to connect to.
+
+Update: If you are using a chrome based browser it might ask for permissions to "see other devices on your nework". If you do not allow this, the RPC will fail to connect to the RPC running locally. You can read more about this at the official [Chrome Developer Blog](https://developer.chrome.com/blog/local-network-access).
 
 ## Contributing
 PRs are welcome! The codebase is pretty small so it shouldn't be too hard to find your way around.
